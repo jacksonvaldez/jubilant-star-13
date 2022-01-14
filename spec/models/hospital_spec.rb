@@ -24,9 +24,9 @@ RSpec.describe Hospital do
     end
   end
 
-  describe 'unique_universities' do
-    it 'returns the names of universities that the doctors attend' do
-      expect(@hospital_1.universities).to eq(["Stanford university", "Some university"]).or eq(["Some university", "Stanford university"])
+  describe 'universities' do
+    it 'returns the names of universities that the doctors attend without duplicated' do
+      expect(@hospital_1.universities).to eq(["Harvard university", "Some university", "Stanford university"])
     end
   end
 
